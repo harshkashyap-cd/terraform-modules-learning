@@ -19,7 +19,7 @@ module "ec2" {
   ami           = var.ami_id
   instance_type = var.instance_type
   subnet_id     = module.subnet.subnet_id
-  name          = "my-ec2"
+  name          = var.instance_name
 }
 
 module "networking" {
