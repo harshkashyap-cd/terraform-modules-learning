@@ -4,7 +4,7 @@ variable "vpc_id" {
 }
 
 
-variable "subnet_id" {
+variable "public_subnet_id" {
   description = "Public subnet ID to associate with route table"
   type        = string
 }

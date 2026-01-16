@@ -12,8 +12,13 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "subnet_id" {
-  description = "Subnet ID where EC2 will be launched"
+variable "public_subnet_id" {
+  description = "Public Subnet ID where EC2 will be launched"
+  type        = string
+}
+
+variable "private_subnet_id" {
+  description = "Private Subnet ID where EC2 will be launched"
   type        = string
 }
 
@@ -21,4 +26,22 @@ variable "name" {
   description = "Name tag for EC2 instance"
   type        = string
   default     = "default-ec2"
+}
+
+variable "associate_public_ip" {
+  type = bool
+}
+
+
+variable "enable_extra_volume" {
+  type    = bool
+  default = false
+}
+variable "availability_zone" {
+  type    = string
+  default = "us-east-1a"
+}
+variable "extra_volume_size" {
+  type    = number
+  default = 20
 }

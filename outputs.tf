@@ -8,6 +8,7 @@ output "subnet_id" {
   value       = module.subnet.subnet_id
 }
 
+
 output "ec2_instance_id" {
   description = "ID of the created EC2 instance"
   value       = module.ec2.instance_id
