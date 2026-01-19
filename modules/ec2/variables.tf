@@ -12,15 +12,11 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "public_subnet_id" {
-  description = "Public Subnet ID where EC2 will be launched"
+variable "subnet_id" {
+  description = "Subnet ID where EC2 will be launched"
   type        = string
 }
 
-variable "private_subnet_id" {
-  description = "Private Subnet ID where EC2 will be launched"
-  type        = string
-}
 
 variable "name" {
   description = "Name tag for EC2 instance"
